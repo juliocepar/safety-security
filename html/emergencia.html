@@ -9,11 +9,9 @@
     <title>
         Reporte de emergencia
     </title>
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport'
-    />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
-    />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">-->
     <link rel="stylesheet" href="../assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css" />
     <!-- CSS Files -->
@@ -38,28 +36,28 @@
         Tip 2: you can also add an image using data-image tag
     -->
             <div class="logo">
-                <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-                    Creative Tim
+                <a href="../index.html" class="simple-text logo-normal">
+                    Safety and Security
                 </a>
             </div>
             <div class="sidebar-wrapper">
                 <ul class="nav">
-                    <li class="nav-item active  ">
-                        <a class="nav-link" href="./dashboard.html">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./incidente.html">
                             <i class="material-icons">dashboard</i>
-                            <p>Dashboard</p>
+                            <p>Incidentes</p>
                         </a>
                     </li>
-                    <li class="nav-item ">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">
+                            <i class="material-icons">local_hospital</i>
+                            <p>Emergencias</p>
+                        </a>
+                    </li>
+                    <!--<li class="nav-item ">
                         <a class="nav-link" href="./user.html">
                             <i class="material-icons">person</i>
                             <p>User Profile</p>
-                        </a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="./tables.html">
-                            <i class="material-icons">content_paste</i>
-                            <p>Table List</p>
                         </a>
                     </li>
                     <li class="nav-item ">
@@ -85,7 +83,7 @@
                             <i class="material-icons">notifications</i>
                             <p>Notifications</p>
                         </a>
-                    </li>
+                    </li>-->
                     <!-- <li class="nav-item active-pro ">
                 <a class="nav-link" href="./upgrade.html">
                     <i class="material-icons">unarchive</i>
@@ -100,10 +98,10 @@
             <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
                 <div class="container-fluid">
                     <div class="navbar-wrapper">
-                        <a class="navbar-brand" href="#pablo">Dashboard</a>
+                        <a class="navbar-brand" href="#">Safety and Security</a>
                     </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false"
-                        aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
+                        aria-expanded="false" aria-label="Toggle navigation">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="navbar-toggler-icon icon-bar"></span>
                         <span class="navbar-toggler-icon icon-bar"></span>
@@ -121,7 +119,7 @@
                         </form>
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="#pablo">
+                                <a class="nav-link" href="#">
                                     <i class="material-icons">dashboard</i>
                                     <p class="d-lg-none d-md-block">
                                         Stats
@@ -129,7 +127,8 @@
                                 </a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
                                     <i class="material-icons">notifications</i>
                                     <span class="notification">5</span>
                                     <p class="d-lg-none d-md-block">
@@ -145,7 +144,7 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#pablo">
+                                <a class="nav-link" href="#">
                                     <i class="material-icons">person</i>
                                     <p class="d-lg-none d-md-block">
                                         Account
@@ -163,7 +162,8 @@
                         <div class="col-lg-12 col-md-12">
                             <div class="card">
                                 <div class="card-header card-header-primary">
-                                    <h2 class="card-title text-center font-weight-bold text-uppercase">Reporte de emergencia</h2>
+                                    <h2 class="card-title text-center font-weight-bold text-uppercase">Reporte de
+                                        emergencia</h2>
                                 </div>
                                 <div class="card-body">
                                     <div class="row">
@@ -183,12 +183,14 @@
                                         </div>
                                         <div class="col-lg-2 col-md-3 col-sm-12">
                                             <div class="form-group">
-                                                <label for="txtNumEmergencia" class="bmd-label-floating">Nº de emergencia</label>
-                                                <input type="text" class="form-control" id="txtNumEmergencia" value="123" disabled />
+                                                <label for="txtNumEmergencia" class="bmd-label-floating">Nº de
+                                                    emergencia</label>
+                                                <input type="text" class="form-control" id="txtNumEmergencia" value="123"
+                                                    disabled />
                                             </div>
                                         </div>
                                     </div>
-                                    <br/>
+                                    <br />
                                     <div class="row">
                                         <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
                                             <label for="selAsset">Asset afectado:</label>
@@ -222,16 +224,6 @@
                                             </select>
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
-                                            <label for="selPersonasAfectadas">Personas afectadas:</label>
-                                            <select class="form-control show-tick selectpicker" id="selPersonasAfectadas">
-                                                <option value="" selected disabled hidden>-- Por favor seleccione --</option>
-                                                <option value="10">Fallecidos</option>
-                                                <option value="20">Lesionados Graves</option>
-                                                <option value="30">Lesionados Leves</option>
-                                                <option value="40">Evacuados</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
                                             <label for="selOperacionAfectada">Operación afectada:</label>
                                             <select class="form-control show-tick selectpicker" id="selOperacionAfectada">
                                                 <option value="" selected disabled hidden>-- Por favor seleccione --</option>
@@ -245,14 +237,16 @@
                                             </select>
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
-                                            <label for="txtTiempoRecuperacion">Tiempo estimado de recuperación o reposición:</label>
+                                            <label for="txtTiempoRecuperacion">Tiempo estimado de recuperación o
+                                                reposición:</label>
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text">
                                                         <i class="material-icons">access_time</i>
                                                     </span>
                                                 </div>
-                                                <input type="number" min="1" class="form-control" id="txtTiempoRecuperacion" placeholder="Ejemplo: 30">
+                                                <input type="number" min="1" class="form-control" id="txtTiempoRecuperacion"
+                                                    placeholder="Ejemplo: 30">
                                                 <span class="input-group-addon">hora(s)</span>
                                             </div>
                                         </div>
@@ -264,7 +258,8 @@
                                                         <i class="material-icons">attach_money</i>
                                                     </span>
                                                 </div>
-                                                <input type="number" step="0.01" min="0.00" class="form-control" id="txtEstimacionDanno" placeholder="Ejemplo: 123.50">
+                                                <input type="number" step="0.01" min="0.00" class="form-control" id="txtEstimacionDanno"
+                                                    placeholder="Ejemplo: 123.50">
                                                 <span class="input-group-addon">pesos</span>
                                             </div>
                                         </div>
@@ -284,23 +279,40 @@
                                                         <i class="material-icons">access_time</i>
                                                     </span>
                                                 </div>
-                                                <input type="number" min="1" class="form-control" id="txtTiempoReaccionFRT" placeholder="Ejemplo: 30">
+                                                <input type="number" min="1" class="form-control" id="txtTiempoReaccionFRT"
+                                                    placeholder="Ejemplo: 30">
                                                 <span class="input-group-addon">minuto(s)</span>
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
-                                            <label for="selRecursosEmergenciaEmpleados">Recursos de emergencia empleados:</label>
-                                            <select class="form-control show-tick selectpicker" id="selRecursosEmergenciaEmpleados">
-                                                <option value="" selected disabled hidden>-- Por favor seleccione --</option>
+                                            <label for="selRecursosEmergenciaEmpleados">Recursos de emergencia
+                                                empleados:</label>
+                                            <select class="form-control show-tick selectpicker" id="selRecursosEmergenciaEmpleados"
+                                                multiple title="-- Por favor seleccione uno o varios --">
                                                 <option value="10">Personal</option>
                                                 <option value="20">Carros y Ambulancias</option>
                                                 <option value="30">Insumos Relevantes</option>
                                             </select>
                                         </div>
+                                        <!-- Aqui comienza el codigo para la lista de personas afectadas -->
+                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                            <h3 class="title">
+                                                <i class="material-icons">how_to_reg</i> Personas afectadas
+                                            </h3>
+                                        </div>
+                                        <div id="listaPersonas" class="container"></div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 ml-3 pt-2">
+                                            <button type="button" class="btn btn-sm btn-success" id="btnAddPersona"
+                                                onclick="agregarOpcion()">
+                                                <i class="material-icons">add</i> Añadir persona
+                                            </button>
+                                        </div>
+                                        <!-- Aqui termina el codigo de la lista de personas afectadas -->
                                         <div class="col-lg-2 col-md-2 col-sm-1 mb-4"></div>
                                         <div class="col-lg-8 col-md-8 col-sm-10 mb-4">
                                             <div class="form-group">
-                                                <label for="txaDescripcionEmergencia" class="bmd-label-floating">Descripción de la emergencia</label>
+                                                <label for="txaDescripcionEmergencia" class="bmd-label-floating">Descripción
+                                                    de la emergencia</label>
                                                 <textarea class="form-control" id="txaDescripcionEmergencia" rows="1"></textarea>
                                             </div>
                                         </div>
@@ -322,11 +334,13 @@
                                         </div>
                                         <div class="col-lg-1 col-md-1 clearfix visible-xs mb-4"></div>
                                         <div class="col-lg-1 col-md-1 clearfix visible-xs mb-4"></div>
-                                        
+
                                         <div class="col-lg-5 col-md-5 col-sm-12 mb-4">
                                             <div class="form-group">
-                                                <label for="txtNombreSupervisorBrigada" class="bmd-label-floating">Supervisor de Brigada que efectúa el informe</label>
-                                                <input type="text" class="form-control" id="txtNombreSupervisorBrigada" value="José Pérez" disabled />
+                                                <label for="txtNombreSupervisorBrigada" class="bmd-label-floating">Supervisor
+                                                    de Brigada que efectúa el informe</label>
+                                                <input type="text" class="form-control" id="txtNombreSupervisorBrigada"
+                                                    value="José Pérez" disabled />
                                             </div>
                                         </div>
                                         <div class="col-lg-1 col-md-1 clearfix visible-xs mb-4"></div>
@@ -345,7 +359,7 @@
             </div>
             <footer class="footer">
                 <div class="container-fluid">
-                    <nav class="float-left">
+                    <!--<nav class="float-left">
                         <ul>
                             <li>
                                 <a href="https://www.creative-tim.com">
@@ -368,14 +382,13 @@
                                 </a>
                             </li>
                         </ul>
-                    </nav>
+                    </nav>-->
                     <div class="copyright float-right">
                         &copy;
                         <script>
                             document.write(new Date().getFullYear())
-                        </script>, made with
-                        <i class="material-icons">favorite</i> by
-                        <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
+                        </script>, powered by
+                        <a href="https://www.marnagarage.com" target="_blank">Marna Garage</a>.
                     </div>
                 </div>
             </footer>
