@@ -274,10 +274,16 @@
                                             </select>
                                         </div>
                                         <div class="col-lg-2 col-md-2 col-sm-1 mb-4"></div>
-                                        <div class="col-lg-8 col-md-8 col-sm-10 mb-4">
-                                            <div class="form-group">
+                                        <div class="row col-lg-8 col-md-8 col-sm-10 mb-4">
+                                            <div class="col-sm-11 form-group px-0">
                                                 <label for="txaDescripcionIncidente" class="bmd-label-floating">Descripción del incidente</label>
                                                 <textarea class="form-control" id="txaDescripcionIncidente" rows="1"></textarea>
+                                            </div>
+                                            <div class="col-sm-1 px-0">
+                                                <button type="button" class="btn btn-light btn-round btn-lg btn-fab"
+                                                        id="btnVozATexto" onclick="startArtyom()">
+                                                    <i class="material-icons">mic</i>
+                                                </button>
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-md-2 col-sm-1 mb-4"></div>
@@ -387,6 +393,8 @@
 
     <!-- Archivos personalizados -->
     <script src="../js/incidente.js"></script>
+    <script src="../js/artyom.min.js"></script>
+    <script src="../js/artyomCommands.js"></script>
 </body>
 
 </html>

@@ -4,7 +4,7 @@ $(document).ready(function () {
     var mes = (hoy.getMonth() + 1 < 10) ? '0' + (hoy.getMonth() + 1) : hoy.getMonth() + 1;
     var anno = hoy.getFullYear();
     var hoyStr = dia + '/' + mes + '/' + anno;
-    
+
     $('#dtpFecha').datepicker({
         locale: 'es-es',
         format: 'dd/mm/yyyy',
@@ -18,6 +18,7 @@ $(document).ready(function () {
     });
 
     $('.selectpicker').selectpicker();
+
     autosize($('textarea'));
 
     $('#selAlertaOrganismos').change(function () {
@@ -33,4 +34,35 @@ $(document).ready(function () {
         swal('Incidente enviado exitosamente', '', 'success');
     });
 
+    artyom.redirectRecognizedTextOutput(function (text, isFinal) {
+        var texto = $('#txaDescripcionIncidente');
+        if (isFinal) {
+            texto.val(text);
+        } else {
+
+        }
+    });
+
 });
+
+//inicializamos la libreria Artyom
+function startArtyom() {
+    $('#btnVozATexto').attr('onclick', 'stopArtyom()');
+    $('#btnVozATexto').removeClass('btn-light');
+    $('#btnVozATexto').addClass('btn-danger');
+    artyom.initialize({
+        lang: "es-ES",
+        continuous: true,// Reconoce 1 solo comando y para de escuchar
+        listen: true, // Iniciar !
+        debug: true, // Muestra un informe en la consola
+        speed: 1 // Habla normalmente
+    });
+};
+
+// Stop libreria;
+function stopArtyom() {
+    $('#btnVozATexto').attr('onclick', 'startArtyom()');
+    $('#btnVozATexto').removeClass('btn-danger');
+    $('#btnVozATexto').addClass('btn-light');
+    artyom.fatality();// Detener cualquier instancia previa
+};
