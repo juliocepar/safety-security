@@ -42,6 +42,13 @@ $(document).ready(function () {
         }
     });
 
+    Dropzone.options.frmImagenes = {
+        maxFilesize: 2,
+        uploadMultiple: true,
+        acceptedFiles: 'image/*',
+        addRemoveLinks: true
+    }
+
 });
 
 // Agrega un nuevo campo en la lista de Personas Afectadas

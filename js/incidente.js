@@ -43,6 +43,13 @@ $(document).ready(function () {
         }
     });
 
+    Dropzone.options.frmImagenes = {
+        maxFilesize: 2,
+        uploadMultiple: true,
+        acceptedFiles: 'image/*',
+        addRemoveLinks: true
+    }
+
 });
 
 //inicializamos la libreria Artyom
