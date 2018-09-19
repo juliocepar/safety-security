@@ -22,6 +22,10 @@
     <!-- Bootstrap select -->
     <link rel="stylesheet" href="../assets/bootstrap-select-1.13.2/dist/css/bootstrap-select.css" />
 
+    <!-- Dropzone (drag & drop para subir imágenes) -->
+    <link rel="stylesheet" href="../assets/css/basic.css" />
+    <link rel="stylesheet" href="../assets/css/dropzone.css" />
+
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="../css/estilo.css" />
 
@@ -309,14 +313,36 @@
                                         </div>
                                         <!-- Aqui termina el codigo de la lista de personas afectadas -->
                                         <div class="col-lg-2 col-md-2 col-sm-1 mb-4"></div>
-                                        <div class="col-lg-8 col-md-8 col-sm-10 mb-4">
-                                            <div class="form-group">
-                                                <label for="txaDescripcionEmergencia" class="bmd-label-floating">Descripción
-                                                    de la emergencia</label>
+                                        <div class="row col-lg-8 col-md-8 col-sm-10 mb-4">
+                                            <div class="col-sm-11 form-group px-0">
+                                                <label for="txaDescripcionEmergencia">Descripción de la emergencia</label>
                                                 <textarea class="form-control" id="txaDescripcionEmergencia" rows="1"></textarea>
+                                            </div>
+                                            <div class="col-sm-1 px-0">
+                                                <button type="button" class="btn btn-light btn-round btn-lg btn-fab" id="btnVozATexto" 
+                                                onclick="startArtyom()">
+                                                    <i class="material-icons">mic</i>
+                                                </button>
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-md-2 col-sm-1 mb-4"></div>
+                                        <!-- inicio DropZone-->
+                                        <div class="col-lg-2 col-md-2 col-sm-1 mb-4"></div>
+                                        <div class="col-lg-8 mb-4">
+                                            <form action="/" id="frmImagenes" class="dropzone" method="post" enctype="multipart/form-data">
+                                                <div class="dz-message">
+                                                    <div class="drag-icon-cph">
+                                                        <i class="material-icons">touch_app</i>
+                                                    </div>
+                                                    <h3>Arrastre las imágenes o haga clic aquí para subirlas</h3>
+                                                </div>
+                                                <div class="fallback">
+                                                    <input name="file" type="file" multiple />
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-1 mb-4"></div>
+                                        <!-- fin Dropzone-->
                                         <div class="col-lg-1 col-md-1 clearfix visible-xs mb-4"></div>
                                         <div class="col-lg-5 col-md-5 col-sm-12 mb-4">
                                             <label for="selAlertaOrganismos">¿Se alertó a organismos de apoyo?</label>
@@ -417,6 +443,11 @@
     <script src="../assets/js/autosize.js"></script>
     <!-- Sweetalert 2 -->
     <script src="../assets/js/sweetalert2.all.min.js"></script>
+     <!-- Artyom (Speech to text) -->
+     <script src="../assets/js/artyom.min.js"></script>
+     <script src="../assets/js/artyomCommands.js"></script>
+     <!-- Dropzone (drag & drop para subir imágenes) -->
+     <script src="../assets/js/dropzone.js"></script>
 
     <!-- Archivos personalizados -->
     <script src="../js/emergencia.js"></script>

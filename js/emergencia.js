@@ -33,6 +33,22 @@ $(document).ready(function () {
         swal('Reporte de Emergencia enviado exitosamente', '', 'success');
     });  
 
+    artyom.redirectRecognizedTextOutput(function (text, isFinal) {
+        var texto = $('#txaDescripcionEmergencia');
+        if (isFinal) {
+            texto.val(text);
+        } else {
+
+        }
+    });
+
+    Dropzone.options.frmImagenes = {
+        maxFilesize: 2,
+        uploadMultiple: true,
+        acceptedFiles: 'image/*',
+        addRemoveLinks: true
+    }
+
 });
 
 // Agrega un nuevo campo en la lista de Personas Afectadas
@@ -64,3 +80,24 @@ function removerOpcion(boton) {
     $(boton).parent().parent().remove();
 }
 
+//inicializamos la libreria Artyom
+function startArtyom() {
+    $('#btnVozATexto').attr('onclick', 'stopArtyom()');
+    $('#btnVozATexto').removeClass('btn-light');
+    $('#btnVozATexto').addClass('btn-danger');
+    artyom.initialize({
+        lang: "es-ES",
+        continuous: true,// Reconoce 1 solo comando y para de escuchar
+        listen: true, // Iniciar !
+        debug: true, // Muestra un informe en la consola
+        speed: 1 // Habla normalmente
+    });
+};
+
+// Stop libreria;
+function stopArtyom() {
+    $('#btnVozATexto').attr('onclick', 'startArtyom()');
+    $('#btnVozATexto').removeClass('btn-danger');
+    $('#btnVozATexto').addClass('btn-light');
+    artyom.fatality();// Detener cualquier instancia previa
+};
