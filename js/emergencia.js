@@ -38,7 +38,8 @@ $(document).ready(function () {
     artyom.redirectRecognizedTextOutput(function (text, isFinal) {
         var texto = $('#txaDescripcionEmergencia');
         if (isFinal) {
-            texto.val(text);
+            texto.val(texto.val() + "\n" + text);
+            autosize.update(texto);
         } else {
 
         }
@@ -147,7 +148,7 @@ function startArtyom() {
         lang: "es-ES",
         continuous: true,// Reconoce 1 solo comando y para de escuchar
         listen: true, // Iniciar !
-        debug: true, // Muestra un informe en la consola
+        debug: false, // Muestra un informe en la consola
         speed: 1 // Habla normalmente
     });
 };
