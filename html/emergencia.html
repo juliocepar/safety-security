@@ -320,12 +320,19 @@
                                             </div>
                                             <div class="col-sm-1 px-0">
                                                 <button type="button" class="btn btn-light btn-round btn-lg btn-fab" id="btnVozATexto" 
-                                                onclick="startArtyom()">
+                                                onclick="startArtyom(); startRecording()">
                                                     <i class="material-icons">mic</i>
                                                 </button>
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-md-2 col-sm-1 mb-4"></div>
+                                        <!-- Inicio Audio Grabado-->
+                                        <div class="col-lg-2 col-md-2 col-sm-1 mb-4"></div>
+                                        <div class="col-lg-8">    
+                                            <table id="recordingslist"></table>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-1 mb-4"></div>
+                                        <!-- Fin Audio Grabado-->
                                         <!-- inicio DropZone-->
                                         <div class="col-lg-2 col-md-2 col-sm-1 mb-4"></div>
                                         <div class="col-lg-8 mb-4">
@@ -448,6 +455,9 @@
      <script src="../assets/js/artyomCommands.js"></script>
      <!-- Dropzone (drag & drop para subir imágenes) -->
      <script src="../assets/js/dropzone.js"></script>
+     <!-- Grabador de audio-->
+     <script src="../assets/js/recordLive.js"></script>
+     <script src="../assets/js/lib/recorder.js"></script> 
 
     <!-- Archivos personalizados -->
     <script src="../js/emergencia.js"></script>

@@ -141,7 +141,7 @@ function removerOpcion(boton) {
 
 //inicializamos la libreria Artyom
 function startArtyom() {
-    $('#btnVozATexto').attr('onclick', 'stopArtyom()');
+    $('#btnVozATexto').attr('onclick', 'stopArtyom(); stopRecording()');
     $('#btnVozATexto').removeClass('btn-light');
     $('#btnVozATexto').addClass('btn-danger');
     artyom.initialize({
@@ -155,7 +155,7 @@ function startArtyom() {
 
 // Stop libreria;
 function stopArtyom() {
-    $('#btnVozATexto').attr('onclick', 'startArtyom()');
+    $('#btnVozATexto').attr('onclick', 'startArtyom(); startRecording()');
     $('#btnVozATexto').removeClass('btn-danger');
     $('#btnVozATexto').addClass('btn-light');
     artyom.fatality();// Detener cualquier instancia previa
