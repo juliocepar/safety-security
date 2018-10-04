@@ -151,11 +151,17 @@ function startArtyom() {
         debug: false, // Muestra un informe en la consola
         speed: 1 // Habla normalmente
     });
+    navigator.getUserMedia({audio: true}, startUserMedia, function(e) {
+        console.warn('No live audio input: ' + e);
+      });
+      setTimeout(function () {
+          startRecording();
+      }, 500);
 };
 
 // Stop libreria;
 function stopArtyom() {
-    $('#btnVozATexto').attr('onclick', 'startArtyom(); startRecording()');
+    $('#btnVozATexto').attr('onclick', 'startArtyom()');
     $('#btnVozATexto').removeClass('btn-danger');
     $('#btnVozATexto').addClass('btn-light');
     artyom.fatality();// Detener cualquier instancia previa

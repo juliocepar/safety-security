@@ -118,7 +118,7 @@ window.onload = function init() {
     console.warn('No web audio support in this browser!');
   }
   
-  navigator.getUserMedia({audio: true}, startUserMedia, function(e) {
+  /*navigator.getUserMedia({audio: true}, startUserMedia, function(e) {
     console.warn('No live audio input: ' + e);
-  });
+  });*/
 };
