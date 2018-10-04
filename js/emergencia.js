@@ -37,8 +37,12 @@ $(document).ready(function () {
 
     artyom.redirectRecognizedTextOutput(function (text, isFinal) {
         var texto = $('#txaDescripcionEmergencia');
+        var salto = "\n";
         if (isFinal) {
-            texto.val(texto.val() + "\n" + text);
+            if(texto.val() == "") {
+                salto = "";
+            }
+            texto.val(texto.val() + salto + text);
             autosize.update(texto);
         } else {
 
@@ -141,7 +145,7 @@ function removerOpcion(boton) {
 
 //inicializamos la libreria Artyom
 function startArtyom() {
-    $('#btnVozATexto').attr('onclick', 'stopArtyom(); stopRecording()');
+    $('#btnVozATexto').attr('onclick', 'stopArtyom()');
     $('#btnVozATexto').removeClass('btn-light');
     $('#btnVozATexto').addClass('btn-danger');
     artyom.initialize({
@@ -151,12 +155,6 @@ function startArtyom() {
         debug: false, // Muestra un informe en la consola
         speed: 1 // Habla normalmente
     });
-    navigator.getUserMedia({audio: true}, startUserMedia, function(e) {
-        console.warn('No live audio input: ' + e);
-      });
-      setTimeout(function () {
-          startRecording();
-      }, 500);
 };
 
 // Stop libreria;
